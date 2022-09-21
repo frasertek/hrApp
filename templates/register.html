@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}
+    Register Page
+{% endblock %}
+
+{% block content %}
+        <center>
+            <form method="POST" action="">
+                {{ form.hidden_tag() }}
+                {{ form.username }}<br>
+                {{ form.password }}<br>
+                {{form.submit }}
+            </form>
+            <br>
+            <h2>Already have an account? Sign In</h2>
+            <a class="btn btn-sm btn-secondary" href="{{url_for('login_page')}}"><button>Sign In</button></a>
+        </center>
+        
+{% endblock %}

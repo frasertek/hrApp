@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}
+    Home Page
+{% endblock %}
+
+{% block content %}
+    <center>
+        <div>
+            <h1 style="font-size:500%; font-family: sans-serif; color:aquamarine">HR SYSTEM</h1>
+            <p style= "font-size:150%; font-family:sans-serif">Click the link below to get started</p>
+            <br>
+            <a class="btn btn-primary" href="{{ url_for('login_page') }}"><button>Get Started</button></a>
+        </div>
+    </center>
+{% endblock %}

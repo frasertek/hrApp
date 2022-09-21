@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/stylesheet.css')}}">
+    <title>
+        {% block title %}
+
+        {% endblock %}
+    </title>
+    
+</head>
+<body>
+    <div>
+        <ul class="horizontal">
+        <li><a href="{{url_for('home_page')}}">Home</a></li>
+        <li><a href="{{url_for('news_page')}}">News</a></li>
+        <li><a href="{{url_for('contactus_page')}}">Contact Us</a></li>
+        <li><a href="{{url_for('aboutus_page')}}">About Us</a></li>
+        <li class="rightli" style="float:right"><a href="{{url_for('login_page')}}">Login</a></li>
+      </ul>
+    </div>
+    <br>
+    {% block content %}
+
+    {% endblock %}
+    
+</body>
+</html>
